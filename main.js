@@ -45,10 +45,10 @@ const navBtnImg = document.querySelector('#nav-btn__img');
 navBtn.onclick = () => {
   if (nav.classList.toggle('open')) {
     document.querySelector('.lock').style.overflow = 'hidden';
-    navBtnImg.src = "/img/icon/free-icon-crossed-4219073.png";
+    navBtnImg.src = "img/icon/free-icon-crossed-4219073.png";
   } else {
     document.querySelector('.lock').style.overflow = 'auto';
-    navBtnImg.src = "/img/icon/free-icon-menu-4254068.png";
+    navBtnImg.src = "img/icon/free-icon-menu-4254068.png";
   }
 };
 
@@ -58,7 +58,7 @@ link.addEventListener('click', (event) => {
   event.preventDefault();
   nav.classList.remove('open');
    document.querySelector('.lock').style.overflow = 'auto';
-   navBtnImg.src = "/img/icon/free-icon-menu-4254068.png";
+   navBtnImg.src = "img/icon/free-icon-menu-4254068.png";
   
   const targetSectionId = link.getAttribute('href');
   if (document.querySelector(targetSectionId)) {
@@ -72,15 +72,23 @@ link.addEventListener('click', (event) => {
 
 
 document.querySelectorAll('.img-content img').forEach(img => {
-    img.onclick = () => {
-        document.querySelector('.pop-up').style.display = 'block';
-        document.querySelector('.pop-up img').src = img.getAttribute('src')
-    }
+  img.onclick = () => {
+    document.querySelector('body').classList.add('no-scroll');
+    document.querySelector('.pop-up').style.display = 'flex';
+    document.querySelector('.pop-up img').src = img.getAttribute('src');
+    setTimeout(() => {
+      document.querySelector('.pop-up').classList.add('active');
+    }, 10);
+  };
 });
 
 document.querySelector('.pop-up span').onclick = () => {
+  document.querySelector('body').classList.remove('no-scroll');
+  document.querySelector('.pop-up').classList.remove('active');
+  setTimeout(() => {
     document.querySelector('.pop-up').style.display = 'none';
-}
+  }, 300);
+};
 
 
 function rotateCard(card) {
