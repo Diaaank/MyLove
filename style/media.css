@@ -107,60 +107,58 @@
         display: block;
     }
 
-    .acquaintance {
-        display: flex;
-        flex-direction: column;
-        overflow-x: hidden;
-    }
-
-    .card {
-        width: 300px;
-        height: 432px;
-        margin-bottom: 20px;
-    }
-
+    .acquaintance,
     .content {
-        display: block;
-        margin: 10px;
-        align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-
-
+  
+    .card {
+      width: 300px;
+      height: 432px;
+      margin-bottom: 20px;
+    }
+  
     .back-content h2 {
-        font-size: 26px;
-        margin-top: 1px;
-        margin-bottom: 4px;
+      font-size: 26px;
+      margin-top: 1px;
+      margin-bottom: 4px;
     }
-
-    .img-content{
-        position: relative;
-        z-index: 3;
+  
+    .img-content {
+      position: relative;
+      z-index: 3;
     }
-
+  
     .text-potato {
-        font-size: 14px;
-        margin-top: 10px;
+      font-size: 14px;
+      margin-top: 10px;
     }
-
+  
     .text2 {
-        padding: 0px;
-        font-weight: 700;
+      padding: 0;
+      font-weight: 700;
     }
-
+  
     .text3 {
-        font-size: 14px;
+      font-size: 14px;
     }
-
+  
     .carta {
-        margin: 0 auto;
-        padding: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0;
     }
-
+  
     .carta iframe {
-        width: 300px; 
-        height: 500px; 
-        margin-bottom: 40px;
-    }
+      width: 300px;
+      height: 500px;
+      margin-bottom: 40px;
+    } 
 
     .pop-up span {
         position: fixed;
